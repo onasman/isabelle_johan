@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
-import Link, { LinkProps } from "next/link";
+import type { LinkProps } from "next/link";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "~/lib/utils";
 
@@ -21,6 +22,7 @@ export function MainNav() {
 
 interface MobileLinkProps extends LinkProps {
   children: React.ReactNode;
+  href: string;
   className?: string;
 }
 
@@ -31,10 +33,9 @@ function NavLink({ href, className, children, ...props }: MobileLinkProps) {
     <Link
       href={href}
       className={cn(
-        "hover:text-foreground/80 transition-colors",
-        pathname?.startsWith(href.toString())
-          ? "text-foreground"
-          : "text-foreground/60",
+        className,
+        "transition-colors hover:text-foreground/80",
+        pathname?.startsWith(href) ? "text-foreground" : "text-foreground/60",
       )}
       {...props}
     >

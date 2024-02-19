@@ -1,5 +1,3 @@
-import { Card, CardContent, CardHeader } from "./ui/card";
-
 export default async function Intro() {
   return (
     <section id="intro">

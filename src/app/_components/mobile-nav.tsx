@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
-import Link, { LinkProps } from "next/link";
+import type { LinkProps } from "next/link";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { cn } from "~/lib/utils";
 import { Button } from "~/components/ui/button";
@@ -78,6 +79,7 @@ export function MobileNav() {
 }
 
 interface MobileLinkProps extends LinkProps {
+  href: string;
   onOpenChange?: (open: boolean) => void;
   children: React.ReactNode;
   className?: string;
@@ -95,7 +97,7 @@ function MobileLink({
     <Link
       href={href}
       onClick={() => {
-        router.push(href.toString());
+        router.push(href);
         onOpenChange?.(false);
       }}
       className={cn(className)}
