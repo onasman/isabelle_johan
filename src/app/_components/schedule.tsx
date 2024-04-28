@@ -11,7 +11,7 @@ export default async function Schedule() {
 
   return (
     <section id="schema">
-      <RichText value={data.schedule} />
+      <RichText value={data?.schedule} />
     </section>
   );
 }

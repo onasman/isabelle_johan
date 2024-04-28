@@ -9,7 +9,7 @@ export default async function Wedding() {
 
   return (
     <section id="vigsel">
-      <RichText value={data.wedding} />
+      <RichText value={data?.wedding} />
     </section>
   );
 }

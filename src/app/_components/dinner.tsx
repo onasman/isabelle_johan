@@ -9,7 +9,7 @@ export default async function Dinner() {
 
   return (
     <section id="festen">
-      <RichText value={data.dinner} />
+      <RichText value={data?.dinner} />
     </section>
   );
 }

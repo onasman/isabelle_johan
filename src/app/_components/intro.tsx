@@ -9,7 +9,7 @@ export default async function Intro() {
 
   return (
     <section id="intro">
-      <RichText value={data.intro} />
+      <RichText value={data?.intro} />
     </section>
   );
 }
