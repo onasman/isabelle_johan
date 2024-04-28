@@ -8,6 +8,19 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
+    GOOGLE_CREDENTIALS: z.object({
+      type: z.string(),
+      project_id: z.string(),
+      private_key_id: z.string(),
+      private_key: z.string(),
+      client_email: z.string(),
+      client_id: z.string(),
+      auth_uri: z.string(),
+      token_uri: z.string(),
+      auth_provider_x509_cert_url: z.string(),
+      client_x509_cert_url: z.string(),
+      universe_domain: z.string(),
+    }),
   },
 
   /**
@@ -25,6 +38,7 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
+    GOOGLE_CREDENTIALS: JSON.parse(process.env.GOOGLE_CREDENTIALS || ""),
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

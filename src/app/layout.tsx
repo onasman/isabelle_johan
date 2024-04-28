@@ -3,11 +3,6 @@ import { TRPCReactProvider } from "~/trpc/react";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import Header from "./_components/header";
-import dynamic from "next/dynamic";
-import { draftMode } from "next/headers";
-import { token } from "~/lib/sanity.fetch";
-
-const PreviewProvider = dynamic(() => import("~/components/preview-provider"));
 
 export const metadata = {
   title: "Isabelle & Johan",
@@ -21,16 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable} scroll-pt-20 scroll-smooth`}
+    >
       <body>
         <Header />
-        <TRPCReactProvider>
-          {draftMode().isEnabled ? (
-            <PreviewProvider token={token}>{children}</PreviewProvider>
-          ) : (
-            children
-          )}
-        </TRPCReactProvider>
+        <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
   );
