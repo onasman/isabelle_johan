@@ -20,7 +20,7 @@ export default function RootLayout({
       lang="en"
       className={`${GeistSans.variable} ${GeistMono.variable} scroll-pt-20 scroll-smooth`}
     >
-      <body>
+      <body className="mx-20 mb-40">
         <Header />
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>

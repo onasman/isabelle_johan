@@ -9,7 +9,19 @@ const range = "A:H";
 
 export const rsvpRouter = createTRPCRouter({
   addRSVP: publicProcedure
-    .input(z.object({ name: z.string().min(1) }))
+    .input(
+      z.array(
+        z.object({
+          firstname: z.string().min(1),
+          lastname: z.string().min(1),
+          phone: z.string().min(1),
+          email: z.string().min(1),
+          allergies: z.string().min(1),
+          comment: z.string().nullable(),
+        }),
+      ),
+    )
+
     .mutation(async ({ input }) => {
       const auth = new google.auth.GoogleAuth({
         credentials: env.GOOGLE_CREDENTIALS,
@@ -25,7 +37,7 @@ export const rsvpRouter = createTRPCRouter({
         auth,
         requestBody: {
           majorDimension: "ROWS",
-          values: [],
+          values: input.map((obj) => Object.values(obj)),
         },
       });
       return "Success";
