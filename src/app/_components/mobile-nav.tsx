@@ -1,15 +1,15 @@
-"use client";
-import * as React from "react";
-import type { LinkProps } from "next/link";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { cn } from "~/lib/utils";
-import { Button } from "~/components/ui/button";
-import { ScrollArea } from "~/components/ui/scroll-area";
-import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
+'use client'
+import * as React from 'react'
+import type { LinkProps } from 'next/link'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { cn } from '~/lib/utils'
+import { Button } from '~/components/ui/button'
+import { ScrollArea } from '~/components/ui/scroll-area'
+import { Sheet, SheetContent, SheetTrigger } from '~/components/ui/sheet'
 
 export function MobileNav() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -75,14 +75,14 @@ export function MobileNav() {
         </ScrollArea>
       </SheetContent>
     </Sheet>
-  );
+  )
 }
 
 interface MobileLinkProps extends LinkProps {
-  href: string;
-  onOpenChange?: (open: boolean) => void;
-  children: React.ReactNode;
-  className?: string;
+  href: string
+  onOpenChange?: (open: boolean) => void
+  children: React.ReactNode
+  className?: string
 }
 
 function MobileLink({
@@ -92,18 +92,18 @@ function MobileLink({
   children,
   ...props
 }: MobileLinkProps) {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <Link
       href={href}
       onClick={() => {
-        router.push(href);
-        onOpenChange?.(false);
+        router.push(href)
+        onOpenChange?.(false)
       }}
       className={cn(className)}
       {...props}
     >
       {children}
     </Link>
-  );
+  )
 }

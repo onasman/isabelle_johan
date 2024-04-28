@@ -1,37 +1,37 @@
-import "server-only";
+import 'server-only'
 
-import { draftMode } from "next/headers";
-import type { QueryOptions, QueryParams } from "next-sanity";
+import { draftMode } from 'next/headers'
+import type { QueryOptions, QueryParams } from 'next-sanity'
 
-import { client } from "./sanity.client";
+import { client } from './sanity.client'
 
-export const token = process.env.SANITY_API_READ_TOKEN;
+export const token = process.env.SANITY_API_READ_TOKEN
 
 export async function sanityFetch<QueryResponse = unknown>({
   query,
   params = {},
   tags,
 }: {
-  query: string;
-  params?: QueryParams;
-  tags?: string[];
+  query: string
+  params?: QueryParams
+  tags?: string[]
 }) {
-  const isDraftMode = draftMode().isEnabled;
+  const isDraftMode = draftMode().isEnabled
   if (isDraftMode && !token) {
     throw new Error(
-      "The `SANITY_API_READ_TOKEN` environment variable is required.",
-    );
+      'The `SANITY_API_READ_TOKEN` environment variable is required.',
+    )
   }
 
   return client.fetch<QueryResponse>(query, params, {
     ...(isDraftMode &&
       ({
         token: token,
-        perspective: "previewDrafts",
+        perspective: 'previewDrafts',
       } satisfies QueryOptions)),
     next: {
       revalidate: isDraftMode ? 0 : false,
       tags,
     },
-  });
+  })
 }
