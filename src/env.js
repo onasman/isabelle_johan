@@ -38,7 +38,7 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
-    GOOGLE_CREDENTIALS: JSON.parse(process.env.GOOGLE_CREDENTIALS || ""),
+    GOOGLE_CREDENTIALS: JSON.parse(process.env.GOOGLE_CREDENTIALS ?? ""),
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

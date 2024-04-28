@@ -7,7 +7,7 @@ import { client } from "./sanity.client";
 
 export const token = process.env.SANITY_API_READ_TOKEN;
 
-export async function sanityFetch<QueryResponse = any>({
+export async function sanityFetch<QueryResponse = unknown>({
   query,
   params = {},
   tags,

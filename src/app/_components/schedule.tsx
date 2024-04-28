@@ -1,8 +1,11 @@
 import { sanityFetch } from "~/lib/sanity.fetch";
 import { RichText } from "./ui/richtext";
+import { PortableTextProps } from "@portabletext/react";
 
 export default async function Schedule() {
-  const { schedule } = await sanityFetch({
+  const { schedule } = await sanityFetch<{
+    schedule: PortableTextProps["value"];
+  }>({
     query: "*[_type == 'content'][0]{ schedule }",
   });
 
