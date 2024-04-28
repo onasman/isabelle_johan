@@ -1,9 +1,9 @@
 import { PortableText, PortableTextProps } from "@portabletext/react";
 
-export function RichText({ value }: PortableTextProps) {
+export function RichText({ value }: Partial<PortableTextProps>) {
   return (
     <div className="prose">
-      <PortableText value={value} />;
+      <PortableText value={value ?? { _type: "" }} />;
     </div>
   );
 }
