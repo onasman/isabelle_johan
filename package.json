@@ -34,6 +34,7 @@
     "eslint-config-prettier": "^9.1.0",
     "geist": "^1.2.2",
     "googleapis": "^135.0.0",
+    "lint-staged": "^15.2.2",
     "lucide-react": "^0.331.0",
     "next": "^14.0.4",
     "next-sanity": "^7.1.4",
@@ -68,6 +69,11 @@
   },
   "ct3aMetadata": {
     "initVersion": "7.26.0"
+  },
+  "lint-staged": {
+    "*.{js,css,json,md,ts,tsx}": [
+      "prettier --write"
+    ]
   },
   "packageManager": "npm@10.2.3"
 }
