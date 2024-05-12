@@ -14,8 +14,9 @@ import config from '../../../../sanity.config'
 
 export default function StudioPage() {
   return (
-    <div className="absolute inset-0 h-screen w-screen">
-      <NextStudio config={config} />;
+    // <div className="absolute inset-0">
+    <div className="h-[calc(100vh-65px)] overflow-hidden">
+      <NextStudio config={config} />
     </div>
   )
 }

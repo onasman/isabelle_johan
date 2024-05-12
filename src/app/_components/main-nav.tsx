@@ -8,7 +8,7 @@ import { cn } from '~/lib/utils'
 export function MainNav() {
   return (
     <div className="mx-auto hidden md:flex">
-      <nav className="flex items-center gap-6 text-sm">
+      <nav className="text-m flex items-center gap-6">
         <NavLink href="/#schema">Schema</NavLink>
         <NavLink href="/#vigsel">Vigsel</NavLink>
         <NavLink href="/#festen">Festen</NavLink>

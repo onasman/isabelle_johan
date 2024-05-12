@@ -1,14 +1,17 @@
 import './_styles/globals.css'
 import { TRPCReactProvider } from '~/trpc/react'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
 import Header from './_components/header'
+import { Cormorant_Garamond } from 'next/font/google'
 
 export const metadata = {
   title: 'Isabelle & Johan',
   description: '...',
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
 }
+const coramant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+})
 
 export default function RootLayout({
   children,
@@ -18,9 +21,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable} scroll-pt-20 scroll-smooth`}
+      className={`${coramant.className} scroll-pt-20 scroll-smooth bg-background`}
     >
-      <body className="mx-20 mb-40">
+      <body>
         <Header />
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
