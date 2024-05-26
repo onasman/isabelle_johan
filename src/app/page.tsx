@@ -10,6 +10,7 @@ import DresscodeMarkdown from './_markdown/dresscode.mdx'
 import TransportMarkdown from './_markdown/transport.mdx'
 import ScheduleMarkdown from './_markdown/schedule.mdx'
 import { Card, CardContainer } from './_components/ui/card'
+import { Section } from './_components/section'
 
 const RSVP = dynamic(() => import('./_components/rsvp'), { ssr: false })
 
@@ -38,31 +39,35 @@ export default async function Home() {
         <div className="prose max-w-2xl text-center">
           <IntroMarkdown />
         </div>
-        <h1 className="my-10 text-5xl text-primary">BRA ATT VETA</h1>
-        <CardContainer>
-          <Card markdown={<DresscodeMarkdown />} />
-          <Card markdown={<TransportMarkdown />} />
-        </CardContainer>
-        <h1 className="my-10 text-5xl text-primary">SCHEMA</h1>
-        <div className="prose mb-20 max-w-full bg-white p-20 shadow-sm">
-          <ScheduleMarkdown />
-        </div>
-        <h1 className="my-10 text-5xl text-primary">TOASTMASTERS</h1>
-        <div className="prose mb-20 max-w-full bg-white p-20 shadow-sm">
-          <ToastmastersMarkdown />
-        </div>
-        <CardContainer>
-          <Card
-            // imageSrc="/toastmaster.jpg"
-            markdown={<ToastmasterMarkdown />}
-          />
-          <Card
-            // imageSrc="/toastmadam.jpg"
-            markdown={<ToastmadamMarkdown />}
-          />
-        </CardContainer>
-        <h1 className="my-10 text-5xl text-primary">OSA</h1>
-        <RSVP />
+        <Section id="annat" title="BRA ATT VETA">
+          <CardContainer>
+            <Card markdown={<DresscodeMarkdown />} />
+            <Card markdown={<TransportMarkdown />} />
+          </CardContainer>
+        </Section>
+        <Section id="schema" title="SCHEMA">
+          <div className="prose mb-20 max-w-full bg-white p-20 shadow-sm">
+            <ScheduleMarkdown />
+          </div>
+        </Section>
+        <Section id="toastmasters" title="TOASTMASTERS">
+          <div className="prose mb-20 max-w-full bg-white p-20 shadow-sm">
+            <ToastmastersMarkdown />
+          </div>
+          <CardContainer>
+            <Card
+              // imageSrc="/toastmaster.jpg"
+              markdown={<ToastmasterMarkdown />}
+            />
+            <Card
+              // imageSrc="/toastmadam.jpg"
+              markdown={<ToastmadamMarkdown />}
+            />
+          </CardContainer>
+        </Section>
+        <Section id="osa" title="OSA">
+          <RSVP />
+        </Section>
         <h1
           className={`${mackinac.className} mt-36 text-center text-6xl text-[#C39E2C] md:text-8xl`}
         >

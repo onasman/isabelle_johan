@@ -14,11 +14,9 @@ export function MainNav() {
         <Image src="/stamp.svg" alt="logo" width={50} height={50} />
       </Link>
       <nav className="text-m flex items-center gap-6">
-        <NavLink href="/#schema">Schema</NavLink>
-        <NavLink href="/#vigsel">Vigsel</NavLink>
-        <NavLink href="/#festen">Festen</NavLink>
         <NavLink href="/#annat">Bra att veta</NavLink>
-        <NavLink href="/#rsvp">Anmälan</NavLink>
+        <NavLink href="/#schema">Schema</NavLink>
+        <NavLink href="/#toastmasters">Toastmasters</NavLink>
         <NavLink href="/information">Information in english</NavLink>
       </nav>
       <Link href="#rsvp" className="absolute right-0">

@@ -98,7 +98,7 @@ export default function RSVP() {
   }
 
   return (
-    <section id="rsvp" className="bg-white p-10 shadow-sm">
+    <div className="bg-white p-10 shadow-sm">
       <Dialog
         open={confirmationModalOpen}
         onOpenChange={setConfirmationModalOpen}
@@ -219,6 +219,6 @@ export default function RSVP() {
           </Button>
         </form>
       </Form>
-    </section>
+    </div>
   )
 }
