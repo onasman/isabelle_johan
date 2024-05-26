@@ -53,19 +53,16 @@ export function MobileNav() {
       <SheetContent side="left" className="pr-0">
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
-            <MobileLink onOpenChange={setOpen} href="#schema">
-              Schema
-            </MobileLink>
-            <MobileLink onOpenChange={setOpen} href="#vigsel">
-              Vigsel
-            </MobileLink>
-            <MobileLink onOpenChange={setOpen} href="#festen">
-              Festen
-            </MobileLink>
             <MobileLink onOpenChange={setOpen} href="#annat">
               Bra att veta
             </MobileLink>
-            <MobileLink onOpenChange={setOpen} href="#rsvp">
+            <MobileLink onOpenChange={setOpen} href="#schema">
+              Schema
+            </MobileLink>
+            <MobileLink onOpenChange={setOpen} href="#toastmasters">
+              Toastmasters
+            </MobileLink>
+            <MobileLink onOpenChange={setOpen} href="#osa">
               Anmälan
             </MobileLink>
             <MobileLink onOpenChange={setOpen} href="/information">
