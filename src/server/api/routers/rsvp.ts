@@ -16,6 +16,8 @@ export const rsvpRouter = createTRPCRouter({
           lastname: z.string().min(1),
           phone: z.string().min(1),
           email: z.string().min(1),
+          friday: z.string().min(1),
+          saturday: z.string().min(1),
           allergies: z.string().min(1),
           comment: z.string().nullable(),
         }),
