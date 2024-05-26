@@ -1,7 +1,11 @@
 'use client'
 
 import * as React from 'react'
-import type { FieldValues, ControllerProps, FieldPath } from 'react-hook-form'
+import {
+  type FieldValues,
+  type ControllerProps,
+  type FieldPath,
+} from 'react-hook-form'
 import {
   FormControl,
   FormDescription,

@@ -4,10 +4,15 @@ import type { LinkProps } from 'next/link'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '~/lib/utils'
+import Image from 'next/image'
+import { Button } from './ui/button'
 
 export function MainNav() {
   return (
-    <div className="mx-auto hidden md:flex">
+    <div className="relative hidden w-full items-center justify-center md:flex">
+      <Link href="/" className="absolute left-0">
+        <Image src="/stamp.svg" alt="logo" width={50} height={50} />
+      </Link>
       <nav className="text-m flex items-center gap-6">
         <NavLink href="/#schema">Schema</NavLink>
         <NavLink href="/#vigsel">Vigsel</NavLink>
@@ -16,6 +21,9 @@ export function MainNav() {
         <NavLink href="/#rsvp">Anmälan</NavLink>
         <NavLink href="/information">Information in english</NavLink>
       </nav>
+      <Link href="#rsvp" className="absolute right-0">
+        <Button size={'default'}>OSA</Button>
+      </Link>
     </div>
   )
 }

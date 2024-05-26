@@ -1,17 +1,51 @@
 import './_styles/globals.css'
 import { TRPCReactProvider } from '~/trpc/react'
 import Header from './_components/header'
-import { Cormorant_Garamond } from 'next/font/google'
+import localFont from '@next/font/local'
+import { Toaster } from './_components/ui/toaster'
+
+const ptSerif = localFont({
+  src: [
+    {
+      path: '../../public/fonts/PTSerif-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/PTSerif-Italic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/PTSerif-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/PTSerif-BoldItalic.ttf',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-ptserif',
+})
 
 export const metadata = {
   title: 'Isabelle & Johan',
   description: '...',
-  icons: [{ rel: 'icon', url: '/favicon.ico' }],
+  icons: [
+    {
+      rel: 'icon',
+      url: '/favicon.ico',
+      media: '(prefers-color-scheme: light)',
+    },
+    {
+      rel: 'icon',
+      url: '/favicon.ico',
+      media: '(prefers-color-scheme: dark)',
+    },
+  ],
 }
-const coramant = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-})
 
 export default function RootLayout({
   children,
@@ -21,11 +55,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${coramant.className} scroll-pt-20 scroll-smooth bg-background`}
+      className={`${ptSerif.className} scroll-pt-20 scroll-smooth bg-background`}
+      suppressHydrationWarning={true}
     >
       <body>
         <Header />
         <TRPCReactProvider>{children}</TRPCReactProvider>
+        <Toaster />
       </body>
     </html>
   )
