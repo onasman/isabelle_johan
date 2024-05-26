@@ -19,7 +19,7 @@ export function MainNav() {
         <NavLink href="/#toastmasters">Toastmasters</NavLink>
         <NavLink href="/information">Information in english</NavLink>
       </nav>
-      <Link href="#rsvp" className="absolute right-0">
+      <Link href="#osa" className="absolute right-0">
         <Button size={'default'}>OSA</Button>
       </Link>
     </div>
