@@ -46,12 +46,12 @@ export default async function Home() {
           </CardContainer>
         </Section>
         <Section id="schema" title="SCHEMA">
-          <div className="prose mb-20 max-w-full bg-white p-20 shadow-sm">
+          <div className="prose mb-20 max-w-full bg-white p-8 shadow-sm">
             <ScheduleMarkdown />
           </div>
         </Section>
         <Section id="toastmasters" title="TOASTMASTERS">
-          <div className="prose mb-20 max-w-full bg-white p-20 shadow-sm">
+          <div className="prose mb-20 max-w-full bg-white p-8 shadow-sm">
             <ToastmastersMarkdown />
           </div>
           <CardContainer>

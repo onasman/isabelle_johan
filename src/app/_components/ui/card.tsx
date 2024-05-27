@@ -13,7 +13,7 @@ const Card = ({
   return (
     <div
       className={cn(
-        'relative mb-8 block w-full bg-white shadow-sm first-of-type:mr-4 md:w-[calc(50%-16px)]',
+        'relative mb-8 block w-full bg-white shadow-sm md:w-[calc(50%-16px)] md:first-of-type:mr-4',
         className,
       )}
     >

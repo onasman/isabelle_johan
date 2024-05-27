@@ -107,7 +107,7 @@ export default function RSVP() {
           <DialogHeader>
             <DialogTitle>Tack!</DialogTitle>
             <DialogDescription>
-              {`Du har nu OSA't. Stort tack för din anmälan. Ses på bröllopet!`}
+              {`Du har nu osat. Stort tack för din anmälan. Ses på bröllopet!`}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
