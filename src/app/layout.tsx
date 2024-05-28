@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${ptSerif.className} scroll-pt-20 scroll-smooth bg-background`}
+      className={`${ptSerif.className} scroll-pt-6 bg-background md:scroll-pt-20 md:scroll-smooth`}
       suppressHydrationWarning={true}
     >
       <body>
