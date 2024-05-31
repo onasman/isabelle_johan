@@ -122,8 +122,8 @@ export default function RSVP() {
       </Dialog>
       <div className="prose mb-10 max-w-full">
         <p className="mb-0">
-          Fyll i formuläret nedan senast den X. Om du har frågor hör gärna av
-          dig till vårt värdpar.
+          Fyll i formuläret nedan senast den 7e juli. Om du har frågor hör gärna
+          av dig till vårt värdpar.
         </p>
         <p className="mt-0">
           Vi älskar barn och vi ÄLSKAR husdjur. Men vi vill fira vårt bröllop i

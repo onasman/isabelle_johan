@@ -8,7 +8,8 @@ import ToastmadamMarkdown from './_markdown/toastmadam.mdx'
 import ToastmastersMarkdown from './_markdown/toastmasters.mdx'
 import DresscodeMarkdown from './_markdown/dresscode.mdx'
 import TransportMarkdown from './_markdown/transport.mdx'
-import ScheduleMarkdown from './_markdown/schedule.mdx'
+import FridayScheduleMarkdown from './_markdown/friday.mdx'
+import SaturdayScheduleMarkdown from './_markdown/saturday.mdx'
 import { Card, CardContainer } from './_components/ui/card'
 import { Section } from './_components/section'
 
@@ -24,7 +25,7 @@ export default async function Home() {
     <Container>
       <div className="mb-6 flex flex-col items-center">
         <h1
-          className={`${mackinac.className} mb-8 text-center text-6xl text-[#C39E2C] md:text-8xl`}
+          className={`${mackinac.className} mb-8 text-center text-6xl md:text-8xl`}
         >
           Isabelle & Johan
         </h1>
@@ -46,9 +47,10 @@ export default async function Home() {
           </CardContainer>
         </Section>
         <Section id="schema" title="SCHEMA">
-          <div className="prose mb-20 max-w-full bg-white p-8 shadow-sm">
-            <ScheduleMarkdown />
-          </div>
+          <CardContainer>
+            <Card markdown={<FridayScheduleMarkdown />} />
+            <Card markdown={<SaturdayScheduleMarkdown />} />
+          </CardContainer>
         </Section>
         <Section id="toastmasters" title="TOASTMASTERS">
           <div className="prose mb-20 max-w-full bg-white p-8 shadow-sm">
@@ -69,7 +71,7 @@ export default async function Home() {
           <RSVP />
         </Section>
         <h1
-          className={`${mackinac.className} mt-36 text-center text-6xl text-[#C39E2C] md:text-8xl`}
+          className={`${mackinac.className} mt-36 text-center text-6xl md:text-8xl`}
         >
           {`Let's get married`}
         </h1>
