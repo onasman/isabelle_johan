@@ -4,7 +4,7 @@ import Image from 'next/image'
 import IntroMarkdown from './_markdown/intro.mdx'
 import FooterLinks from './_components/footer-links'
 
-export const mackinac = localFont({
+const mackinac = localFont({
   src: '../../public/fonts/mackinac_1895.ttf',
   variable: '--font-mackinac',
 })
