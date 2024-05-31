@@ -18,7 +18,7 @@ export function MobileNav() {
         <Link href="/">
           <Image src="/stamp.svg" alt="logo" width={50} height={50} />
         </Link>
-        <Link href="#osa" className="absolute right-0">
+        <Link href="/osa" className="absolute right-0">
           <Button size={'default'}>OSA</Button>
         </Link>
       </div>
@@ -65,13 +65,13 @@ export function MobileNav() {
             <div className="relative flex h-screen flex-col items-center space-y-3 pr-6">
               <Image src="/stamp.svg" alt="logo" width={100} height={100} />
               <nav className="flex flex-col items-center space-y-4 py-4">
-                <MobileLink onOpenChange={setOpen} href="/#annat">
+                <MobileLink onOpenChange={setOpen} href="/bra-att-veta">
                   Bra att veta
                 </MobileLink>
-                <MobileLink onOpenChange={setOpen} href="/#schema">
+                <MobileLink onOpenChange={setOpen} href="/schema">
                   Schema
                 </MobileLink>
-                <MobileLink onOpenChange={setOpen} href="/#toastmasters">
+                <MobileLink onOpenChange={setOpen} href="/toastmasters">
                   Toastmasters
                 </MobileLink>
               </nav>

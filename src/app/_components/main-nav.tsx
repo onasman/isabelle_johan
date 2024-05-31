@@ -14,11 +14,11 @@ export function MainNav() {
         <Image src="/stamp.svg" alt="logo" width={50} height={50} />
       </Link>
       <nav className="text-m flex items-center gap-6">
-        <NavLink href="/#annat">Bra att veta</NavLink>
-        <NavLink href="/#schema">Schema</NavLink>
-        <NavLink href="/#toastmasters">Toastmasters</NavLink>
+        <NavLink href="/bra-att-veta">Bra att veta</NavLink>
+        <NavLink href="/schema">Schema</NavLink>
+        <NavLink href="/toastmasters">Toastmasters</NavLink>
       </nav>
-      <Link href="#osa" className="absolute right-0">
+      <Link href="/osa" className="absolute right-0">
         <Button size={'default'}>OSA</Button>
       </Link>
     </div>
