@@ -54,8 +54,8 @@ export default async function Home() {
           </div>
         </div>
         <Image
-          className="my-10"
-          src="flowers_04.svg"
+          className="my-10 -rotate-45"
+          src="elements_flowers_08.svg"
           alt="flower"
           width={100}
           height={100}
@@ -101,7 +101,7 @@ export default async function Home() {
       <h1
         className={`${mackinac.className} mb-8 mt-28 text-center text-6xl md:text-8xl`}
       >
-        Let's get married
+        {`Let's get Married!`}
       </h1>
     </Container>
   )
