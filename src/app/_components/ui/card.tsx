@@ -18,19 +18,27 @@ const Card = ({
       )}
     >
       {imageSrc && (
-        <Image
-          alt={imageSrc}
-          className="block h-auto w-auto max-w-full overflow-hidden"
-          src={imageSrc}
-        />
+        <div className="relative aspect-video overflow-hidden">
+          <Image alt={imageSrc} src={imageSrc} fill className="object-cover" />
+        </div>
       )}
       <div className="prose relative p-8 md:p-12">{markdown}</div>
     </div>
   )
 }
 
-const CardContainer = ({ children }: { children: React.ReactNode }) => {
-  return <div className="flex flex-wrap items-stretch">{children}</div>
+const CardContainer = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) => {
+  return (
+    <div className={cn('flex flex-wrap items-stretch', className)}>
+      {children}
+    </div>
+  )
 }
 
 export { CardContainer, Card }

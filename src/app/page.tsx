@@ -36,21 +36,73 @@ export default async function Home() {
           <IntroMarkdown />
         </div>
       </section>
-      <Section>
+      <div className="mb-20 w-full border-[1px]" />
+      <section className="hidden w-full flex-col items-center md:flex">
+        <div className="flex w-full space-x-12">
+          <div className="relative aspect-[4/5] w-4/5 overflow-hidden bg-white shadow-sm">
+            <Image
+              src={'/vertical/ij_2.jpeg'}
+              alt="i+j"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative block h-full w-full bg-white shadow-sm">
+            <div className="prose relative p-12">
+              <FridayScheduleMarkdown />
+            </div>
+          </div>
+        </div>
+        <Image
+          className="my-10"
+          src="flowers_04.svg"
+          alt="flower"
+          width={100}
+          height={100}
+        />
+        <div className="flex w-full space-x-8">
+          <div className="relative block h-full w-full bg-white shadow-sm">
+            <div className="prose relative p-12">
+              <SaturdayScheduleMarkdown />
+            </div>
+          </div>
+          <div className="relative aspect-[4/5] w-4/5 overflow-hidden bg-white shadow-sm">
+            <Image
+              src={'/vertical/ij_10.jpeg'}
+              alt="i+j"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="md:hidden">
         <CardContainer>
-          <Card markdown={<FridayScheduleMarkdown />} />
-          <Card markdown={<SaturdayScheduleMarkdown />} />
+          <Card
+            markdown={<FridayScheduleMarkdown />}
+            imageSrc="/vertical/ij_2.jpeg"
+          />
+          <Card
+            markdown={<SaturdayScheduleMarkdown />}
+            imageSrc="/vertical/ij_10.jpeg"
+          />
         </CardContainer>
-      </Section>
-      <div className="mt-10 flex w-full flex-col items-center justify-center bg-white py-12 shadow-sm">
-        <span className={`text-md mb-8 uppercase md:text-lg`}>
-          Vi hoppas att ni kan komma!
-        </span>
+      </section>
+      <div className="my-20 w-full border-[1px]" />
+      <div className="prose mb-12 flex w-full flex-col items-center justify-center bg-white py-12 shadow-sm">
+        <h3 className="mb-8">Vi hoppas att ni kan komma!</h3>
         <Link href="/osa">
-          <Button size={'default'}>OSA</Button>
+          <Button size={'default'} className="px-12">
+            OSA
+          </Button>
         </Link>
       </div>
       <FooterLinks right={{ src: '/love-story', label: 'Our love story' }} />
+      <h1
+        className={`${mackinac.className} mb-8 mt-28 text-center text-6xl md:text-8xl`}
+      >
+        Let's get married
+      </h1>
     </Container>
   )
 }
