@@ -9,16 +9,19 @@ import { Button } from './ui/button'
 
 export function MainNav() {
   return (
-    <div className="relative hidden w-full items-center justify-center md:flex">
-      <Link href="/" className="absolute left-0">
-        <Image src="/stamp.svg" alt="logo" width={50} height={50} />
-      </Link>
-      <nav className="text-m flex items-center gap-6">
-        <NavLink href="/#annat">Bra att veta</NavLink>
-        <NavLink href="/#schema">Schema</NavLink>
-        <NavLink href="/#toastmasters">Toastmasters</NavLink>
+    <div className="relative hidden w-full items-center md:flex">
+      <nav className="text-m flex gap-6">
+        <NavLink href="/love-story">Our love story</NavLink>
+        <NavLink href="/bra-att-veta">Bra att veta</NavLink>
+        <NavLink href="/toastmasters">Toastmasters</NavLink>
+        <NavLink href="/onskelista">Önskelista</NavLink>
       </nav>
-      <Link href="#osa" className="absolute right-0">
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <Link href="/" className="pointer-events-auto hidden lg:block">
+          <Image src="/stamp.svg" alt="logo" width={50} height={50} />
+        </Link>
+      </div>
+      <Link href="/osa" className="ml-auto">
         <Button size={'default'}>OSA</Button>
       </Link>
     </div>

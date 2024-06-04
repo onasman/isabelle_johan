@@ -121,6 +121,7 @@ export default function RSVP() {
         </DialogContent>
       </Dialog>
       <div className="prose mb-10 max-w-full">
+        <h3>OSA</h3>
         <p className="mb-0">
           Fyll i formuläret nedan senast den 7e juli. Om du har frågor hör gärna
           av dig till vårt värdpar.
