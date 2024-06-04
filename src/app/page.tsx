@@ -3,6 +3,12 @@ import localFont from '@next/font/local'
 import Image from 'next/image'
 import IntroMarkdown from './_markdown/intro.mdx'
 import FooterLinks from './_components/footer-links'
+import { Section } from './_components/section'
+import { Card, CardContainer } from './_components/ui/card'
+import FridayScheduleMarkdown from './_markdown/friday.mdx'
+import SaturdayScheduleMarkdown from './_markdown/saturday.mdx'
+import Link from 'next/link'
+import { Button } from './_components/ui/button'
 
 const mackinac = localFont({
   src: '../../public/fonts/mackinac_1895.ttf',
@@ -30,7 +36,21 @@ export default async function Home() {
           <IntroMarkdown />
         </div>
       </section>
-      <FooterLinks right={{ src: '/bra-att-veta', label: 'Bra att veta' }} />
+      <Section>
+        <CardContainer>
+          <Card markdown={<FridayScheduleMarkdown />} />
+          <Card markdown={<SaturdayScheduleMarkdown />} />
+        </CardContainer>
+      </Section>
+      <div className="mt-10 flex w-full flex-col items-center justify-center bg-white py-12 shadow-sm">
+        <span className={`text-md mb-8 uppercase md:text-lg`}>
+          Vi hoppas att ni kan komma!
+        </span>
+        <Link href="/osa">
+          <Button size={'default'}>OSA</Button>
+        </Link>
+      </div>
+      <FooterLinks right={{ src: '/love-story', label: 'Our love story' }} />
     </Container>
   )
 }

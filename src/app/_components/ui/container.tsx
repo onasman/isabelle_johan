@@ -19,7 +19,7 @@ const Container = ({
       {showLogo && (
         <Link href={'/'}>
           <Image
-            src="/stamp.svg"
+            src="/elements_flowers_10.svg"
             className="hidden md:block"
             alt="sigill"
             width={100}

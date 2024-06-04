@@ -65,14 +65,17 @@ export function MobileNav() {
             <div className="relative flex h-screen flex-col items-center space-y-3 pr-6">
               <Image src="/stamp.svg" alt="logo" width={100} height={100} />
               <nav className="flex flex-col items-center space-y-4 py-4">
+                <MobileLink onOpenChange={setOpen} href="/love-story">
+                  Our love story
+                </MobileLink>
                 <MobileLink onOpenChange={setOpen} href="/bra-att-veta">
                   Bra att veta
                 </MobileLink>
-                <MobileLink onOpenChange={setOpen} href="/schema">
-                  Schema
-                </MobileLink>
                 <MobileLink onOpenChange={setOpen} href="/toastmasters">
                   Toastmasters
+                </MobileLink>
+                <MobileLink onOpenChange={setOpen} href="/onskelista">
+                  Önskelista
                 </MobileLink>
               </nav>
               <Image
