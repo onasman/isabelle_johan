@@ -14,7 +14,7 @@ export function LoveStoryCarousel() {
   return (
     <Carousel className="w-full md:w-1/2" opts={{ loop: true }}>
       <CarouselContent>
-        {Array.from({ length: 11 }).map((_, index) => (
+        {Array.from({ length: 12 }).map((_, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
               <Card>
