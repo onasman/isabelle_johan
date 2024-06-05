@@ -11,13 +11,14 @@ export function MainNav() {
   return (
     <div className="relative hidden w-full items-center md:flex">
       <nav className="text-m flex gap-6">
+        <NavLink href="/#program">Program</NavLink>
         <NavLink href="/love-story">Our love story</NavLink>
         <NavLink href="/bra-att-veta">Bra att veta</NavLink>
         <NavLink href="/toastmasters">Toastmasters</NavLink>
         <NavLink href="/onskelista">Önskelista</NavLink>
       </nav>
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <Link href="/" className="pointer-events-auto hidden lg:block">
+        <Link href="/" className="pointer-events-auto hidden xl:block">
           <Image src="/stamp.svg" alt="logo" width={50} height={50} />
         </Link>
       </div>

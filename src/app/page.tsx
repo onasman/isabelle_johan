@@ -3,7 +3,6 @@ import localFont from '@next/font/local'
 import Image from 'next/image'
 import IntroMarkdown from './_markdown/intro.mdx'
 import FooterLinks from './_components/footer-links'
-import { Section } from './_components/section'
 import { Card, CardContainer } from './_components/ui/card'
 import FridayScheduleMarkdown from './_markdown/friday.mdx'
 import SaturdayScheduleMarkdown from './_markdown/saturday.mdx'
@@ -29,7 +28,7 @@ export default async function Home() {
         </h3>
       </div>
       <div className="relative aspect-video w-full md:w-5/6">
-        <Image src="/slott_brudpar.svg" alt="Wedding photo" fill />
+        <Image src="/slott_brudpar.svg" alt="Wedding photo" fill priority />
       </div>
       <section className="flex w-full flex-col items-center">
         <div className="prose max-w-2xl text-center">
@@ -37,11 +36,14 @@ export default async function Home() {
         </div>
       </section>
       <div className="mb-20 w-full border-[1px]" />
-      <section className="hidden w-full flex-col items-center md:flex">
+      <section
+        id="program"
+        className="hidden w-full flex-col items-center md:flex"
+      >
         <div className="flex w-full space-x-12">
           <div className="relative aspect-[4/5] w-4/5 overflow-hidden bg-white shadow-sm">
             <Image
-              src={'/vertical/ij_2.jpeg'}
+              src={'/vertical/ij_10.jpeg'}
               alt="i+j"
               fill
               className="object-cover"
@@ -68,7 +70,7 @@ export default async function Home() {
           </div>
           <div className="relative aspect-[4/5] w-4/5 overflow-hidden bg-white shadow-sm">
             <Image
-              src={'/vertical/ij_10.jpeg'}
+              src={'/vertical/ij_2.jpeg'}
               alt="i+j"
               fill
               className="object-cover"
@@ -80,11 +82,11 @@ export default async function Home() {
         <CardContainer>
           <Card
             markdown={<FridayScheduleMarkdown />}
-            imageSrc="/vertical/ij_2.jpeg"
+            imageSrc="/vertical/ij_10_vertical.jpeg"
           />
           <Card
             markdown={<SaturdayScheduleMarkdown />}
-            imageSrc="/vertical/ij_10.jpeg"
+            imageSrc="/vertical/ij_2.jpeg"
           />
         </CardContainer>
       </section>
