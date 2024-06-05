@@ -10,7 +10,7 @@ export default async function Home() {
       <section className="mt-12 flex flex-col items-center">
         <RSVP />
       </section>
-      <FooterLinks left={{ src: '/toastmasters', label: 'Toastmasters' }} />
+      <FooterLinks left={{ src: '/onskelista', label: 'Önskelista' }} />
     </Container>
   )
 }

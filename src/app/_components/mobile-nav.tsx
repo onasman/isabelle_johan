@@ -63,8 +63,13 @@ export function MobileNav() {
         <SheetContent side="left" className="z-[1000] pr-0">
           <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10">
             <div className="relative flex h-screen flex-col items-center space-y-3 pr-6">
-              <Image src="/stamp.svg" alt="logo" width={100} height={100} />
+              <Link href="/" onClick={() => setOpen(false)}>
+                <Image src="/stamp.svg" alt="logo" width={100} height={100} />
+              </Link>
               <nav className="flex flex-col items-center space-y-4 py-4">
+                <MobileLink onOpenChange={setOpen} href="/#program">
+                  Program
+                </MobileLink>
                 <MobileLink onOpenChange={setOpen} href="/love-story">
                   Our love story
                 </MobileLink>
