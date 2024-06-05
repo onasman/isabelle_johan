@@ -41,7 +41,7 @@ export default async function Home() {
         className="hidden w-full flex-col items-center md:flex"
       >
         <div className="flex w-full space-x-12">
-          <div className="relative aspect-[4/5] w-4/5 overflow-hidden bg-white shadow-sm">
+          <div className="relative w-4/5 overflow-hidden bg-white shadow-sm">
             <Image
               src={'/vertical/ij_10.jpeg'}
               alt="i+j"
