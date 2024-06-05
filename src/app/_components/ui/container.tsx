@@ -12,7 +12,7 @@ const Container = ({
   return (
     <main
       className={cn(
-        'top-16 mx-auto flex max-w-7xl flex-col items-center overflow-visible px-6 pb-32  md:pt-12 lg:px-0',
+        'top-16 mx-auto flex max-w-5xl flex-col items-center overflow-visible px-6 pb-32 md:pt-12 lg:px-0 ',
         { 'pt-12': !showLogo },
       )}
     >
